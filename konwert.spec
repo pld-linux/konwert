@@ -64,24 +64,24 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755, root, root) %{_bindir}/trs
-%attr(755, root, root) %{_bindir}/konwert
-%attr(755, root, root) %{_bindir}/filterm
-%attr(755, root, root) %dir %{_datadir}/konwert
-%attr(755, root, root) %{_datadir}/konwert/filters
-%attr(755, root, root) %dir %{_datadir}/konwert/aux
+%attr(755,root,root) %{_bindir}/trs
+%attr(755,root,root) %{_bindir}/konwert
+%attr(755,root,root) %{_bindir}/filterm
+%attr(755,root,root) %dir %{_datadir}/konwert
+%attr(755,root,root) %{_datadir}/konwert/filters
+%attr(755,root,root) %dir %{_datadir}/konwert/aux
 %{_datadir}/konwert/aux/UTF8-ascii
 %{_datadir}/konwert/aux/UTF8-ascii1
-%attr(755, root, root) %{_datadir}/konwert/aux/UTF8-charset
+%attr(755,root,root) %{_datadir}/konwert/aux/UTF8-charset
 %{_datadir}/konwert/aux/UTF8-tex
 %{_datadir}/konwert/aux/any
-%attr(755, root, root) %{_datadir}/konwert/aux/argcharset
-%attr(755, root, root) %{_datadir}/konwert/aux/charset-charset
+%attr(755,root,root) %{_datadir}/konwert/aux/argcharset
+%attr(755,root,root) %{_datadir}/konwert/aux/charset-charset
 %{_datadir}/konwert/aux/charsets
-%attr(755, root, root) %{_datadir}/konwert/aux/fixmanconfig
-%attr(755, root, root) %{_datadir}/konwert/aux/fixmeta
-%attr(755, root, root) %dir %{_libdir}/konwert
-%attr(755, root, root) %{_libdir}/konwert/aux
+%attr(755,root,root) %{_datadir}/konwert/aux/fixmanconfig
+%attr(755,root,root) %{_datadir}/konwert/aux/fixmeta
+%attr(755,root,root) %dir %{_libdir}/konwert
+%attr(755,root,root) %{_libdir}/konwert/aux
 %docdir %{_docdir}/konwert-%{version}
 %lang(en) %{_docdir}/konwert-%{version}/en/BUGS
 %lang(en) %{_docdir}/konwert-%{version}/en/CHANGES
@@ -111,21 +111,21 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/konwert/devel/UTF8-charset
 %{_datadir}/konwert/devel/aliases
 %{_datadir}/konwert/devel/any
-%attr(755, root, root) %{_datadir}/konwert/devel/charset-UTF8
+%attr(755,root,root) %{_datadir}/konwert/devel/charset-UTF8
 %{_datadir}/konwert/devel/charset-charset
-%attr(755, root, root) %{_datadir}/konwert/devel/fixtrsutf8
-%attr(755, root, root) %{_datadir}/konwert/devel/fixutf8
-%attr(755, root, root) %{_datadir}/konwert/devel/frequencies
-%attr(755, root, root) %{_datadir}/konwert/devel/hex-trs
-%attr(755, root, root) %{_datadir}/konwert/devel/mergetrs
+%attr(755,root,root) %{_datadir}/konwert/devel/fixtrsutf8
+%attr(755,root,root) %{_datadir}/konwert/devel/fixutf8
+%attr(755,root,root) %{_datadir}/konwert/devel/frequencies
+%attr(755,root,root) %{_datadir}/konwert/devel/hex-trs
+%attr(755,root,root) %{_datadir}/konwert/devel/mergetrs
 %{_datadir}/konwert/devel/mergewithcp437
-%attr(755, root, root) %{_datadir}/konwert/devel/mime
-%attr(755, root, root) %{_datadir}/konwert/devel/mkUTF8-ascii
-%attr(755, root, root) %{_datadir}/konwert/devel/mkUTF8-charset
-%attr(755, root, root) %{_datadir}/konwert/devel/mkaliases
-%attr(755, root, root) %{_datadir}/konwert/devel/mkany
-%attr(755, root, root) %{_datadir}/konwert/devel/mkcharset-charset
-%attr(755, root, root) %{_datadir}/konwert/devel/whichletters
+%attr(755,root,root) %{_datadir}/konwert/devel/mime
+%attr(755,root,root) %{_datadir}/konwert/devel/mkUTF8-ascii
+%attr(755,root,root) %{_datadir}/konwert/devel/mkUTF8-charset
+%attr(755,root,root) %{_datadir}/konwert/devel/mkaliases
+%attr(755,root,root) %{_datadir}/konwert/devel/mkany
+%attr(755,root,root) %{_datadir}/konwert/devel/mkcharset-charset
+%attr(755,root,root) %{_datadir}/konwert/devel/whichletters
 %docdir %{_docdir}/konwert-%{version}
 %lang(en) %{_docdir}/konwert-%{version}/en/devel
 %lang(pl) %{_docdir}/konwert-%{version}/pl/tworzenie
