@@ -2,7 +2,7 @@ Summary:	Converter of character encodings
 Summary(pl):	Konwerter kodowañ znaków
 Name:		konwert
 Version:	1.8
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
@@ -78,16 +78,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/konwert/aux
 %docdir %{_docdir}/konwert-%{version}
 %dir %{_docdir}/konwert-%{version}
-%lang(en) %dir %{_docdir}/konwert-%{version}/en
-%lang(en) %{_docdir}/konwert-%{version}/en/BUGS
-%lang(en) %{_docdir}/konwert-%{version}/en/CHANGES
-%lang(en) %{_docdir}/konwert-%{version}/en/README
-%lang(en) %{_docdir}/konwert-%{version}/en/TODO
-%lang(en) %{_docdir}/konwert-%{version}/en/filterm
-%lang(en) %{_docdir}/konwert-%{version}/en/filters
-%lang(en) %{_docdir}/konwert-%{version}/en/konwert
-%lang(en) %{_docdir}/konwert-%{version}/en/thanks
-%lang(en) %{_docdir}/konwert-%{version}/en/trs
+%dir %{_docdir}/konwert-%{version}/en
+%{_docdir}/konwert-%{version}/en/BUGS
+%{_docdir}/konwert-%{version}/en/CHANGES
+%{_docdir}/konwert-%{version}/en/README
+%{_docdir}/konwert-%{version}/en/TODO
+%{_docdir}/konwert-%{version}/en/filterm
+%{_docdir}/konwert-%{version}/en/filters
+%{_docdir}/konwert-%{version}/en/konwert
+%{_docdir}/konwert-%{version}/en/thanks
+%{_docdir}/konwert-%{version}/en/trs
 %lang(pl) %dir %{_docdir}/konwert-%{version}/pl
 %lang(pl) %{_docdir}/konwert-%{version}/pl/BLEDY
 %lang(pl) %{_docdir}/konwert-%{version}/pl/CZYTAJTO
@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_docdir}/konwert-%{version}/pl/konwert
 %lang(pl) %{_docdir}/konwert-%{version}/pl/podziekowania
 %lang(pl) %{_docdir}/konwert-%{version}/pl/trs
-%lang(en) %{_mandir}/man*/*
+%{_mandir}/man*/*
 %lang(pl) %{_mandir}/pl/man*/*
 
 %files devel
@@ -124,5 +124,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/konwert/devel/mkcharset-charset
 %attr(755,root,root) %{_datadir}/konwert/devel/whichletters
 %docdir %{_docdir}/konwert-%{version}
-%lang(en) %{_docdir}/konwert-%{version}/en/devel
+%{_docdir}/konwert-%{version}/en/devel
 %lang(pl) %{_docdir}/konwert-%{version}/pl/tworzenie
