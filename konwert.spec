@@ -8,9 +8,9 @@ Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
 Patch0:		%{name}-forbids_data_member.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	perl >= 5.001
 BuildRequires:	perl
+Requires:	perl >= 5.001
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Konwert is a package for conversion of text between various character
@@ -46,9 +46,13 @@ OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} \
+
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	mydocdir=$RPM_BUILD_ROOT%{_docdir}/konwert-%{version} \
-	perl=%{_bindir}/perl dontfixmanconfig=1
+	perl=%{_bindir}/perl \
+	dontfixmanconfig=1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
