@@ -2,7 +2,7 @@ Summary:	Converter of character encodings
 Summary(pl):	Konwerter kodowañ znaków
 Name:		konwert
 Version:	1.8
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
@@ -53,6 +53,7 @@ OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} \
+	mydocdir=$RPM_BUILD_ROOT%{_docdir}/konwert-%{version} \
 	perl=%{_bindir}/perl dontfixmanconfig=1
 
 %clean
@@ -81,25 +82,25 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) %{_datadir}/konwert/aux/fixmeta
 %attr(755, root, root) %dir %{_libdir}/konwert
 %attr(755, root, root) %{_libdir}/konwert/aux
-%docdir %{_prefix}/doc/konwert-%{version}
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/BUGS
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/CHANGES
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/README
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/TODO
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/filterm
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/filters
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/konwert
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/thanks
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/trs
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/BLEDY
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/CZYTAJTO
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/DO_ZROBIENIA
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/ZMIANY
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/filterm
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/filtry
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/konwert
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/podziekowania
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/trs
+%docdir %{_docdir}/konwert-%{version}
+%lang(en) %{_docdir}/konwert-%{version}/en/BUGS
+%lang(en) %{_docdir}/konwert-%{version}/en/CHANGES
+%lang(en) %{_docdir}/konwert-%{version}/en/README
+%lang(en) %{_docdir}/konwert-%{version}/en/TODO
+%lang(en) %{_docdir}/konwert-%{version}/en/filterm
+%lang(en) %{_docdir}/konwert-%{version}/en/filters
+%lang(en) %{_docdir}/konwert-%{version}/en/konwert
+%lang(en) %{_docdir}/konwert-%{version}/en/thanks
+%lang(en) %{_docdir}/konwert-%{version}/en/trs
+%lang(pl) %{_docdir}/konwert-%{version}/pl/BLEDY
+%lang(pl) %{_docdir}/konwert-%{version}/pl/CZYTAJTO
+%lang(pl) %{_docdir}/konwert-%{version}/pl/DO_ZROBIENIA
+%lang(pl) %{_docdir}/konwert-%{version}/pl/ZMIANY
+%lang(pl) %{_docdir}/konwert-%{version}/pl/filterm
+%lang(pl) %{_docdir}/konwert-%{version}/pl/filtry
+%lang(pl) %{_docdir}/konwert-%{version}/pl/konwert
+%lang(pl) %{_docdir}/konwert-%{version}/pl/podziekowania
+%lang(pl) %{_docdir}/konwert-%{version}/pl/trs
 %lang(en) %{_mandir}/man*/*
 %lang(pl) %{_mandir}/pl/man*/*
 
@@ -125,6 +126,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) %{_datadir}/konwert/devel/mkany
 %attr(755, root, root) %{_datadir}/konwert/devel/mkcharset-charset
 %attr(755, root, root) %{_datadir}/konwert/devel/whichletters
-%docdir %{_prefix}/doc/konwert-%{version}
-%lang(en) %{_prefix}/doc/konwert-%{version}/en/devel
-%lang(pl) %{_prefix}/doc/konwert-%{version}/pl/tworzenie
+%docdir %{_docdir}/konwert-%{version}
+%lang(en) %{_docdir}/konwert-%{version}/en/devel
+%lang(pl) %{_docdir}/konwert-%{version}/pl/tworzenie
