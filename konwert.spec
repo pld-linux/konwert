@@ -22,7 +22,8 @@ Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
 znaków.
 
 %package devel
-Summary:	development of Konwert's filters
+Summary:	Development of Konwert's filters
+Summary(pl):	Narzêdzia do tworznie filtrów Konwerta
 Group:		Applications/Text
 Requires:	konwert
 
