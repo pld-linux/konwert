@@ -46,7 +46,7 @@ nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
 %patch0 -p1
 
 %build
-OPTFLAGS="%{?debug:-g -O0}%{!?debug:$RPM_OPT_FLAGS -fomit-frame-pointer}"
+OPTFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
 OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
 %{__make} CXXFLAGS="$OPTFLAGS" prefix=%{_prefix} perl=%{_bindir}/perl
 
