@@ -34,7 +34,7 @@ development new filters. They are not needed for normal usage.
 
 %description devel -l pl
 Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
-znaków. Ten pakiet zawieta skrypty i dane przydatne do tworzenia
+znaków. Ten pakiet zawiera skrypty i dane przydatne do tworzenia
 nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
 
 %prep
