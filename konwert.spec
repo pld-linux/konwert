@@ -2,7 +2,7 @@ Summary:	Converter of character encodings
 Summary(pl):	Konwerter kodowañ znaków
 Name:		konwert
 Version:	1.8
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
