@@ -4,15 +4,16 @@ Name:		konwert
 Version:	1.8
 Release:	3
 License:	GPL
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
-Source0:	http://qrczak.home.ml.org/programy/linux/konwert/%{name}-%{version}.tar.gz
+Group(pl):	Aplikacje/Tekst
+Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
 Patch0:		%{name}-forbids_data_member.patch
-URL:		http://qrczak.home.ml.org/programy/linux/konwert/
+URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	perl >= 5.001
-BuildRequires: perl
+BuildRequires:	perl
 
 %description
 Konwert is a package for conversion of text between various character
@@ -24,9 +25,10 @@ znaków.
 
 %package devel
 Summary:	development of Konwert's filters
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 Requires:	konwert
 
 %description devel
@@ -36,19 +38,22 @@ development new filters. They are not needed for normal usage.
 
 %description -l pl devel
 Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
-znaków. Ten pakiet zawieta skrypty i dane przydatne do tworzenia nowych
-filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
+znaków. Ten pakiet zawieta skrypty i dane przydatne do tworzenia
+nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
 
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-CXXFLAGS="$RPM_OPT_FLAGS" make prefix=%{_prefix} perl=%{_bindir}/perl
+OPTFLAGS="%{?debug:-g -O}%{!?debug:$RPM_OPT_FLAGS -fomit-frame-pointer}"
+OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
+%{__make} CXXFLAGS="$OPTFLAGS" prefix=%{_prefix} perl=%{_bindir}/perl
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} perl=%{_bindir}/perl dontfixmanconfig=1
+%{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} \
+	perl=%{_bindir}/perl dontfixmanconfig=1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -95,8 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_prefix}/doc/konwert-%{version}/pl/konwert
 %lang(pl) %{_prefix}/doc/konwert-%{version}/pl/podziekowania
 %lang(pl) %{_prefix}/doc/konwert-%{version}/pl/trs
-%attr(664, root, man) %lang(en) %{_prefix}/man/man*/*
-%attr(664, root, man) %lang(pl) %{_prefix}/man/pl/man*/*
+%lang(en) %{_mandir}/man*/*
+%lang(pl) %{_mandir}/pl/man*/*
 
 %files devel
 %defattr(644,root,root,755)
