@@ -5,9 +5,6 @@ Version:	1.8
 Release:	4
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
 Patch0:		%{name}-forbids_data_member.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
@@ -26,9 +23,6 @@ znaków.
 %package devel
 Summary:	development of Konwert's filters
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Requires:	konwert
 
 %description devel
