@@ -6,6 +6,7 @@ Release:	6
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
+# Source0-md5:	0a1dcb0fa7a1990980aba8ab9a4c3184
 Patch0:		%{name}-forbids_data_member.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
 BuildRequires:	perl
