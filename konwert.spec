@@ -67,9 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/trs
 %attr(755,root,root) %{_bindir}/konwert
 %attr(755,root,root) %{_bindir}/filterm
-%attr(755,root,root) %dir %{_datadir}/konwert
+%dir %{_datadir}/konwert
 %attr(755,root,root) %{_datadir}/konwert/filters
-%attr(755,root,root) %dir %{_datadir}/konwert/aux
+%dir %{_datadir}/konwert/aux
 %{_datadir}/konwert/aux/UTF8-ascii
 %{_datadir}/konwert/aux/UTF8-ascii1
 %attr(755,root,root) %{_datadir}/konwert/aux/UTF8-charset
@@ -80,9 +80,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/konwert/aux/charsets
 %attr(755,root,root) %{_datadir}/konwert/aux/fixmanconfig
 %attr(755,root,root) %{_datadir}/konwert/aux/fixmeta
-%attr(755,root,root) %dir %{_libdir}/konwert
+%dir %{_libdir}/konwert
 %attr(755,root,root) %{_libdir}/konwert/aux
 %docdir %{_docdir}/konwert-%{version}
+%dir %{_docdir}/konwert-%{version}
+%lang(en) %dir %{_docdir}/konwert-%{version}/en
 %lang(en) %{_docdir}/konwert-%{version}/en/BUGS
 %lang(en) %{_docdir}/konwert-%{version}/en/CHANGES
 %lang(en) %{_docdir}/konwert-%{version}/en/README
@@ -92,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(en) %{_docdir}/konwert-%{version}/en/konwert
 %lang(en) %{_docdir}/konwert-%{version}/en/thanks
 %lang(en) %{_docdir}/konwert-%{version}/en/trs
+%lang(pl) %dir %{_docdir}/konwert-%{version}/pl
 %lang(pl) %{_docdir}/konwert-%{version}/pl/BLEDY
 %lang(pl) %{_docdir}/konwert-%{version}/pl/CZYTAJTO
 %lang(pl) %{_docdir}/konwert-%{version}/pl/DO_ZROBIENIA
