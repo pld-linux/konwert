@@ -30,7 +30,7 @@ Konwert is a package for conversion of text between various character
 encodings. This package contains scripts and data files useful for
 development new filters. They are not needed for normal usage.
 
-%description -l pl devel
+%description devel -l pl
 Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
 znaków. Ten pakiet zawieta skrypty i dane przydatne do tworzenia
 nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
