@@ -47,7 +47,8 @@ OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
 %{__make} \
 	CXXFLAGS="$OPTFLAGS" \
 	prefix=%{_prefix} \
-	perl=%{__perl}
+	perl=%{__perl} \
+	libdir=%{_libdir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	mydocdir=$RPM_BUILD_ROOT%{_docdir}/konwert-%{version} \
 	perl=%{__perl} \
+	libdir=$RPM_BUILD_ROOT%{_libdir} \
 	dontfixmanconfig=1
 
 %clean
