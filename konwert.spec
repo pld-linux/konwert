@@ -2,15 +2,15 @@ Summary:	Converter of character encodings
 Summary(pl):	Konwerter kodowañ znaków
 Name:		konwert
 Version:	1.8
-Release:	6
+Release:	7
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
 # Source0-md5:	0a1dcb0fa7a1990980aba8ab9a4c3184
 Patch0:		%{name}-forbids_data_member.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
-BuildRequires:	perl
-Requires:	perl >= 5.001
+BuildRequires:	perl-base
+Requires:	perl-base >= 5.001
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,7 +44,10 @@ nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
 %build
 OPTFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
 OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
-%{__make} CXXFLAGS="$OPTFLAGS" prefix=%{_prefix} perl=%{_bindir}/perl
+%{__make} \
+	CXXFLAGS="$OPTFLAGS" \
+	prefix=%{_prefix} \
+	perl=%{__perl}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -53,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	mydocdir=$RPM_BUILD_ROOT%{_docdir}/konwert-%{version} \
-	perl=%{_bindir}/perl \
+	perl=%{__perl} \
 	dontfixmanconfig=1
 
 %clean
