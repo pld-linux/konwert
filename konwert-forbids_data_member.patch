@@ -1,0 +1,47 @@
+--- konwert-1.8.orig/bin/trs.cc	Tue Sep  1 12:24:52 1998
++++ konwert-1.8/bin/trs.cc	Thu Apr 27 11:39:35 2000
+@@ -133,7 +133,7 @@
+ 
+ struct zmienna
+ {
+-	int zmienna, wartosc;
++	int nazwa, wartosc;
+ 	zmienna *nast;
+ };
+ 
+@@ -315,7 +315,7 @@
+ 					)
+ 					{
+ 						*zmienne = new zmienna;
+-						(*zmienne)->zmienna =
++						(*zmienne)->nazwa =
+ 							s1[0] >= 'A' && s1[0] <= 'Z' ?
+ 								s1[0] - 'A'
+ 							:
+@@ -542,7 +542,7 @@
+ 					zmienna *z = r->warunki;
+ 					while (z)
+ 					{
+-						if (zmienne[z->zmienna] != z->wartosc)
++						if (zmienne[z->nazwa] != z->wartosc)
+ 							goto niepasuje;
+ 						z = z->nast;
+ 					}
+@@ -572,7 +572,7 @@
+ 					z = r->zmienne;
+ 					while (z)
+ 					{
+-						zmienne[z->zmienna] = z->wartosc;
++						zmienne[z->nazwa] = z->wartosc;
+ 						z = z->nast;
+ 					}
+ 					goto zamienione;
+@@ -588,7 +588,7 @@
+ 
+ /******** PROGRAM G£ÓWNY *****************************************************/
+ 
+-main (int argc, char **argv)
++int main (int argc, char **argv)
+ {
+ /*
+ 	setlocale (LC_ALL, "");
