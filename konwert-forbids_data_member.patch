@@ -1,6 +1,26 @@
 --- konwert-1.8.orig/bin/trs.cc	Tue Sep  1 12:24:52 1998
-+++ konwert-1.8/bin/trs.cc	Thu Apr 27 11:39:35 2000
-@@ -133,7 +133,7 @@
++++ konwert-1.8/bin/trs.cc	Sun Mar 24 13:23:44 2002
+@@ -7,13 +7,15 @@
+ //     \__/              qrczak@knm.org.pl
+ //      ^^      http://qrczak.home.ml.org/
+ 
+-#include <string.h>
+-#include <iostream.h>
+-#include <fstream.h>
+-#include <strstream.h>
++#include <string>
++#include <iostream>
++#include <fstream>
++#include <strstream>
++#include <stdlib.h>
+ #include <ctype.h>
+ #include <unistd.h>
+ #define _(String) (String)
++using namespace std;
+ 
+ #define WERSJA "1.8"
+ #define WLKSLOWA 64*1024	// Maksymalna d³ugo¶æ s³owa do zamiany
+@@ -133,7 +135,7 @@
  
  struct zmienna
  {
@@ -9,7 +29,7 @@
  	zmienna *nast;
  };
  
-@@ -315,7 +315,7 @@
+@@ -315,7 +317,7 @@
  					)
  					{
  						*zmienne = new zmienna;
@@ -18,7 +38,7 @@
  							s1[0] >= 'A' && s1[0] <= 'Z' ?
  								s1[0] - 'A'
  							:
-@@ -542,7 +542,7 @@
+@@ -542,7 +544,7 @@
  					zmienna *z = r->warunki;
  					while (z)
  					{
@@ -27,7 +47,7 @@
  							goto niepasuje;
  						z = z->nast;
  					}
-@@ -572,7 +572,7 @@
+@@ -572,7 +574,7 @@
  					z = r->zmienne;
  					while (z)
  					{
@@ -36,7 +56,7 @@
  						z = z->nast;
  					}
  					goto zamienione;
-@@ -588,7 +588,7 @@
+@@ -588,7 +590,7 @@
  
  /******** PROGRAM G£ÓWNY *****************************************************/
  
