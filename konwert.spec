@@ -1,5 +1,5 @@
 Summary:	Converter of character encodings
-Summary(pl):	Konwerter kodowañ znaków
+Summary(pl.UTF-8):   Konwerter kodowaÅ„ znakÃ³w
 Name:		konwert
 Version:	1.8
 Release:	7
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Konwert is a package for conversion of text between various character
 encodings.
 
-%description -l pl
-Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
-znaków.
+%description -l pl.UTF-8
+Pakiet Konwert sÅ‚uÅ¼y do konwersji tekstÃ³w miÄ™dzy rÃ³Å¼nymi kodowaniami
+znakÃ³w.
 
 %package devel
 Summary:	Development of Konwert's filters
-Summary(pl):	Narzêdzia do tworznie filtrów Konwerta
+Summary(pl.UTF-8):   NarzÄ™dzia do tworznie filtrÃ³w Konwerta
 Group:		Applications/Text
 Requires:	konwert
 
@@ -33,10 +33,10 @@ Konwert is a package for conversion of text between various character
 encodings. This package contains scripts and data files useful for
 development new filters. They are not needed for normal usage.
 
-%description devel -l pl
-Pakiet Konwert s³u¿y do konwersji tekstów miêdzy ró¿nymi kodowaniami
-znaków. Ten pakiet zawiera skrypty i dane przydatne do tworzenia
-nowych filtrów. Nie s± one potrzebne do normalnego u¿ytkowania.
+%description devel -l pl.UTF-8
+Pakiet Konwert sÅ‚uÅ¼y do konwersji tekstÃ³w miÄ™dzy rÃ³Å¼nymi kodowaniami
+znakÃ³w. Ten pakiet zawiera skrypty i dane przydatne do tworzenia
+nowych filtrÃ³w. Nie sÄ… one potrzebne do normalnego uÅ¼ytkowania.
 
 %prep
 %setup -q
