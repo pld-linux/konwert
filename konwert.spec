@@ -1,5 +1,5 @@
 Summary:	Converter of character encodings
-Summary(pl.UTF-8):   Konwerter kodowań znaków
+Summary(pl.UTF-8):	Konwerter kodowań znaków
 Name:		konwert
 Version:	1.8
 Release:	7
@@ -24,7 +24,7 @@ znaków.
 
 %package devel
 Summary:	Development of Konwert's filters
-Summary(pl.UTF-8):   Narzędzia do tworznie filtrów Konwerta
+Summary(pl.UTF-8):	Narzędzia do tworznie filtrów Konwerta
 Group:		Applications/Text
 Requires:	konwert
 
