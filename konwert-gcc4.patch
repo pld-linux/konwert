@@ -1,0 +1,63 @@
+diff -Nru konwert-1.8.old/bin/512bold1.cc konwert-1.8/bin/512bold1.cc
+--- konwert-1.8.old/bin/512bold1.cc	1998-07-30 15:46:17.000000000 +0200
++++ konwert-1.8/bin/512bold1.cc	2008-11-27 15:23:16.000000000 +0100
+@@ -1,5 +1,6 @@
+ 
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ 
+ int kolory[2][8] = { { 0, 1, 2, 1, 4, 1, 2, 7 }, { 0, 5, 6, 6, 5, 5, 6, 3 } };
+ 
+diff -Nru konwert-1.8.old/bin/512bold.cc konwert-1.8/bin/512bold.cc
+--- konwert-1.8.old/bin/512bold.cc	1998-08-26 14:37:32.000000000 +0200
++++ konwert-1.8/bin/512bold.cc	2008-11-27 15:22:36.000000000 +0100
+@@ -1,6 +1,7 @@
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
++#include <cstdlib>
++#include <iostream>
++using namespace std;
+ 
+ #define NPAR 16
+ 
+diff -Nru konwert-1.8.old/bin/filterm.cc konwert-1.8/bin/filterm.cc
+--- konwert-1.8.old/bin/filterm.cc	1998-07-29 20:14:11.000000000 +0200
++++ konwert-1.8/bin/filterm.cc	2008-11-27 15:22:03.000000000 +0100
+@@ -1,8 +1,8 @@
+-#include <iostream.h>
++#include <iostream>
+ #include <signal.h>
+-#include <stdio.h>
+-#include <stdlib.h>
+-#include <string.h>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
+ #include <termios.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+@@ -10,6 +10,7 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
++using namespace std;
+ 
+ #define WERSJA "1.8"
+ 
+diff -Nru konwert-1.8.old/bin/trs.cc konwert-1.8/bin/trs.cc
+--- konwert-1.8.old/bin/trs.cc	2008-11-27 15:19:32.000000000 +0100
++++ konwert-1.8/bin/trs.cc	2008-11-27 15:20:51.000000000 +0100
+@@ -11,8 +11,9 @@
+ #include <iostream>
+ #include <fstream>
+ #include <strstream>
+-#include <stdlib.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cctype>
++#include <cstring>
+ #include <unistd.h>
+ #define _(String) (String)
+ using namespace std;
