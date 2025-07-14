@@ -41,8 +41,8 @@ nowych filtrów. Nie są one potrzebne do normalnego użytkowania.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 OPTFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
