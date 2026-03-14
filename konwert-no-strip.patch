@@ -1,0 +1,28 @@
+--- konwert-1.8/Makefile.orig	2026-03-14 03:21:38.189920581 +0100
++++ konwert-1.8/Makefile	2026-03-14 03:21:38.193560149 +0100
+@@ -193,11 +193,11 @@
+ 
+ $(installlibauxdir)/512bold: $(srcbindir)/512bold
+ 	$(INSTALL) -d $(dir $@)
+-	$(INSTALL) -m755 -s $< $@
++	$(INSTALL) -m755 $< $@
+ 
+ $(installlibauxdir)/512bold1: $(srcbindir)/512bold1
+ 	$(INSTALL) -d $(dir $@)
+-	$(INSTALL) -m755 -s $< $@
++	$(INSTALL) -m755 $< $@
+ 
+ ###############################################################################
+ 
+@@ -332,9 +332,9 @@
+ install: all
+ 	$(INSTALL) -d $(bindir) $(filtersdir) $(auxdir) $(libauxdir) \
+ 		$(develdir) $(libdeveldir) $(mydocdir) $(mandir)
+-	$(INSTALL) -m755 -s $(installbindir)/trs     $(bindir)
++	$(INSTALL) -m755 $(installbindir)/trs     $(bindir)
+ 	$(INSTALL) -m755    $(installbindir)/konwert $(bindir)
+-	$(INSTALL) -m755 -s $(installbindir)/filterm $(bindir)
++	$(INSTALL) -m755 $(installbindir)/filterm $(bindir)
+ 	cp -dRf $(installfiltersdir)/* $(filtersdir)
+ 	$(perl) $(srcdeveldir)/mkaliases $(srcdeveldir)/aliases \
+ 		$(installfiltersdir) $(filtersdir)

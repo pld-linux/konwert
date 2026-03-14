@@ -2,14 +2,15 @@ Summary:	Converter of character encodings
 Summary(pl.UTF-8):	Konwerter kodowań znaków
 Name:		konwert
 Version:	1.8
-Release:	7
+Release:	8
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/konwert/%{name}-%{version}.tar.gz
 # Source0-md5:	0a1dcb0fa7a1990980aba8ab9a4c3184
 Patch0:		%{name}-forbids_data_member.patch
 Patch1:		%{name}-gcc4.patch
-URL:		http://qrczak.ids.net.pl/programy/linux/konwert/
+Patch2:		%{name}-no-strip.patch
+URL:		https://salsa.debian.org/debian/konwert
 BuildRequires:	libstdc++-devel
 BuildRequires:	perl-base
 Requires:	perl-base >= 5.001
@@ -43,6 +44,7 @@ nowych filtrów. Nie są one potrzebne do normalnego użytkowania.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 OPTFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
